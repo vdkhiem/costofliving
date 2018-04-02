@@ -35,3 +35,4 @@ Deploy to heroku
     heroku create
     heroku addons:create mongolab:sandbox
     heroku config // this return mongodb connection "mongodb://heroku_jhdnzbx9:nksvav4a8uup0qte70ibjpgpfj@ds233218.mlab.com:33218/heroku_jhdnzbx9"
+    git push heroku master //push app (master branch) to heroku 
