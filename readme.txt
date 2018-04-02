@@ -1,3 +1,24 @@
+An Introduction to Web Scraping with Node JS
+https://codeburst.io/an-introduction-to-web-scraping-with-node-js-1045b55c63f7
+https://medium.com/data-scraper-tips-tricks/scraping-data-with-javascript-in-3-minutes-8a7cf8275b31
+https://scotch.io/tutorials/scraping-the-web-with-node-js
+
+Website:
+Synchronous https://www.expatistan.com/cost-of-living/auckland 
+Asynchronous https://www.numbeo.com/cost-of-living/in/Auckland 
+
+
+jsonframe allows you to input a json file, scrape the structured data listed in the json and output an already well structured json object / file. Ready to save to your database.
+
+		#region OrganizationID
+		public abstract class organizationID : PX.Data.IBqlField
+		{
+		}
+
+		[Organization(IsKey = true, BqlField = typeof(TaxPeriodEffective.organizationID))]
+		public virtual Int32? OrganizationID { get; set; }
+		#endregion
+
 The official MongoDB driver for Node.js. Node mongodb native 
     https://github.com/mongodb/node-mongodb-native
     ObjectId is 12-byte value consists of
