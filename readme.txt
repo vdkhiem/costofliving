@@ -19,4 +19,13 @@ Add to github
     git init
     add .gitignore
     create new repository in github https://github.com/vdkhiem/costofliving
-    
+    git add .
+    git commit -m "Init Commit"
+    git remote add origin https://github.com/vdkhiem/costofliving.git
+    git push -u origin master
+
+    Add/Update to github
+    git status
+    git add .
+    git commit -m "my comment"
+    git push origin master
