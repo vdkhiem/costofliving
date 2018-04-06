@@ -1,13 +1,38 @@
 const {mongoose} = require('./mongoose');
 const {MongoClient, ObjectID} = require('mongodb'); 
 
-module.exports.saveDocument = (newDocument) => {
+module.exports.insertDocument = (newDocument) => {
     return new Promise((resolve, reject) => {
         newDocument.save().then((doc) => {
-            console.log('Successed save: ', JSON.stringify(doc, undefined, 2));
+            console.log('Successed add: ', JSON.stringify(doc, undefined, 2));
             resolve(doc);
         }, (err) => {
-            console.log('Failed to created: ', doc);
+            console.log('Failed to add: ', doc);
+            reject(err);
+        });
+    });
+};
+
+
+module.exports.removeDocument = (Document, id) => {
+    return new Promise((resolve, reject) => {
+        Document.findByIdAndRemove(id).then((doc) => {
+            console.log('Successed delete: ', JSON.stringify(doc, undefined, 2));
+            resolve(doc);
+        }, (err) => {
+            console.log('Failed to delete: ', doc);
+            reject(err);
+        });
+    });
+};
+
+module.exports.updateDocument = (Document, id, body) => {
+    return new Promise((resolve, reject) => {
+        Document.findByIdAndUpdate(id, {$set: body}, {new: true}).then((doc) => {
+            console.log('Successed update: ', JSON.stringify(doc, undefined, 2));
+            resolve(doc);
+        }, (err) => {
+            console.log('Failed to update: ', doc);
             reject(err);
         });
     });
